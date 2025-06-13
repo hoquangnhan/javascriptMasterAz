@@ -1,0 +1,27 @@
+<!-- public/index.html – basic chat UI -->
+<!DOCTYPE html>
+<html>
+<head><title>Coach Chat</title></head>
+<body>
+  <div id="chat"><ul id="messages"></ul></div>
+  <input id="input" autocomplete="off" /><button id="send">Send</button>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const room = prompt('Enter room ID');
+    socket.emit('joinRoom', room);
+
+    socket.on('message', msg => {
+      const el = document.createElement('li');
+      el.textContent = typeof msg === 'object' ? `${msg.user}: ${msg.text}` : msg;
+      document.getElementById('messages').appendChild(el);
+    });
+
+    document.getElementById('send').onclick = () => {
+      const text = document.getElementById('input').value;
+      socket.emit('chatMessage', { room, user: 'Me', text });
+      document.getElementById('input').value = '';
+    };
+  </script>
+</body>
+</html>
