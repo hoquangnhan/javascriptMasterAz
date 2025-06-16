@@ -10,7 +10,7 @@ public class GtaTextGame {
     };
 
     static int money = 100;
-    static int wantedLevel = 0;
+    static int wantedLevel = 0
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
