@@ -106,15 +106,15 @@
  }
  
  let score=10
- if (score<=`10`){
+ if (score >= 10) {
      console.log(`rank:S`);
- }else if(score<=`9`){
+ } else if (score >= 9) {
      console.log(`rank:a`);
- }else if(score<=`8`){
+ } else if (score >= 8) {
      console.log(`rank:b`);
- }else if(score<=`7`){
+ } else if (score >= 7) {
      console.log(`rank:c`);
- }else{
+ } else {
      console.log(`rank:d`);
  }
   
