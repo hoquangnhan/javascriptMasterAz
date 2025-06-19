@@ -1,0 +1,37 @@
+reviews:
+  base_branches:
+    - main
+    - develop
+    - release/*
+    - feature/*
+  review_status: true       # Hiện trạng thái "review done"
+  comments: true            # Cho phép bot comment tự động
+  suggestions: true         # Bật đề xuất sửa code trực tiếp
+  approval: false           # Không tự động approve pull request
+  max_comments: 20          # Giới hạn số lượng comment trong một PR
+
+language:
+  primary: javascript       # Ngôn ngữ chính
+  secondary:
+    - html
+    - css
+    - typescript
+
+style:
+  enforce_style: true       # Gợi ý theo coding style (naming, format...)
+  style_guide: airbnb       # Theo chuẩn Airbnb, có thể đổi: google, standard...
+
+safety:
+  allow_secrets: false      # Cảnh báo khi phát hiện secrets/token/API keys
+  sensitive_code_paths:
+    - src/config/
+    - .env
+
+performance:
+  detect_large_loops: true  # Cảnh báo vòng lặp lớn
+  suggest_memoization: true # Gợi ý dùng memoization nếu phù hợp
+
+custom_rules:
+  - rule: "Tránh hard-code URL API"
+    pattern: "https?://"
+    action: warn
