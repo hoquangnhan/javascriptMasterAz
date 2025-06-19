@@ -74,23 +74,11 @@
  - các giá trị primitive được lưu trữ trực tiếp trong ngăn xếp(stack)
  - khi một giá trị primitive được gán cho một biến, giá trị này không thể thay đổi
  - khi thay đổi giá trị của biến, một bản sao độc lập của giá trị đó sẽ được tạo ra
- 
- - Primitive types bao gồm các loại phổ biến sau:
- Number: đại diện cho các số, bao gồm cả số nguyên và số thập phân
- String: đại diện cho các chuỗi ký tự
- Boolean: đại diện cho các giá trị (true) hoặc (false)
- Null: Đại diện cho các giá trị kiểu "rỗng" hoặc "không có gì"
- Undefined: đại diện cho một biến chưa được gán giá trị
- Symbol: đại diện cho một giá trị Unique/ được sử dụng làm khoá hoặc ID cho các đối tưognj object
- BigInt: đại điện cho các số nguyên có giá trị kiểu Number thông thường ở trên
- **/
+
  
  /** Nhóm các kiểu dữ liệu reference
  - các giá trị tham chiếu không được lưu trữ trực tiếp trong ngăn xếp (stack) mà sẽ làm tham chiếu đến địa chỉ của đối tượng trong Heap memory
- - các giá trị tham chiếu có thể được thay đổi khi chúng ta tạo ra
- - khi gán một đối tượng A cho B thì cả A và B sẽ tham chiếu đến cùng một đối tượng, chứ không tạo ra bản sao độc lập riêng biệt
- *Reference type bao gồm các kiểu dữ liệu phổ biến sau
- - Object: đại diện cho một tập hợp các thuộc tính và phương thức
+ - các giá tương thức
  - array: một loại đối tượng đặc biệt để lưu trữ danh sách các giá trị
  - function: đại diện cho các hàm xử lý, cũng được coi là một loại đối tượng
  **/
@@ -442,7 +430,6 @@ console.log('Object.keys (obj3)', Object.keys(obj3));//kết quả: ['a', 'b', '
 const obj4 = {a:1, b:2,c:3 };
 console.log('Object.keys (obj4)', Object.keys(obj4));//kết quả: [1, 2, 3]
 
-//Object.entries() trả về một mảng (array) chứa các cặp tên và giá trị của các thuộc tính của các một đối tượng
 const obj5 ={a:1, b:2, v:3};
 console.log('object.keys' (obj5), Object.keys(obj5));//kết quả: [['a', 1], ['b', 2], ['v', 3]]
  
