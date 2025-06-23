@@ -118,8 +118,8 @@
      console.log(`rank:d`);
  }
   
- let day= new Date().getday()
- switch(){
+ let day = new Date().getDay()
+ switch (day) {
      case 0:
        console.log(`Sunday`);
      break
